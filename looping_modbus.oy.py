@@ -16,7 +16,7 @@ while True :
         x = 0
         client.write_register(101, x)  # write value x ke register 101
 
-    rr = client.read_holding_registers(0x65, 1, unit=0)  # baca register(register dalam HexaDesima, panjang range register n-indeks)
-    assert (rr.function_code < 0x80)  # test that we are not an error
+    rr = client.read_holding_registers(0x65, 1, unit=0)  # baca register(register dalam HexaDesimal, panjang range register n-indeks)
+    assert (rr.function_code < 0x80)                     # test that we are not an error
     print(rr)
     print(rr.registers)
